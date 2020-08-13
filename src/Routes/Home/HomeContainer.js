@@ -9,6 +9,7 @@ export default class extends React.Component {
     error: null,
     loading: true,
   };
+
   async componentDidMount() {
     try {
       const {
@@ -35,6 +36,7 @@ export default class extends React.Component {
       });
     }
   }
+
   render() {
     const { nowPlaying, upcoming, popular, error, loading } = this.state;
     return (
