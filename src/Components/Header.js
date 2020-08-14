@@ -5,7 +5,6 @@ import { Link, withRouter } from "react-router-dom";
 
 // styled-components
 const GnbWrap = styled.header`
-  position: fixed;
   width: 100%;
 `;
 const Gnb = styled.nav`
@@ -29,7 +28,7 @@ const GnbLink = styled(Link)`
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
 `;
 const Header = ({ location: { pathname } }) => {
