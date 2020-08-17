@@ -13,6 +13,9 @@ const Title = styled.p`
   font-weight: 600;
 `;
 const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 360px);
+  grid-gap: 16px;
   margin: 24px 0 0 0;
   font-size: 14px;
 `;
