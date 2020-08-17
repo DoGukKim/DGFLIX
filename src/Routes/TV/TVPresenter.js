@@ -2,13 +2,16 @@ import React from "react";
 import PropsTypes from "prop-types";
 import styled from "styled-components";
 import Section from "../../Components/Section";
+import Loader from "../../Components/Loader";
 
 const Container = styled.main`
   color: #fff;
 `;
 
 const TVPresenter = ({ topRated, popular, airingToday, error, loading }) =>
-  loading ? null : (
+  loading ? (
+    <Loader />
+  ) : (
     <Container>
       {topRated && topRated.length > 0 && (
         <Section title="Top Rated Shows">

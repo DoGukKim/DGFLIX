@@ -2,12 +2,15 @@ import React from "react";
 import PropsTypes from "prop-types";
 import styled from "styled-components";
 import Section from "../../Components/Section";
+import Loader from "../../Components/Loader";
 
 const Container = styled.main`
   color: #fff;
 `;
 const HomePresenter = ({ nowPlaying, popular, upcoming, error, loading }) =>
-  loading ? null : (
+  loading ? (
+    <Loader />
+  ) : (
     <Container>
       {nowPlaying && nowPlaying.length > 0 && (
         <Section title="Now Playing">
@@ -18,9 +21,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, error, loading }) =>
         <Section title="Upcoming">{upcoming.map(movie => movie.title)}</Section>
       )}
       {popular && popular.length > 0 && (
-        <Section title="Popular">
-          {popular.map(movie => movie.title)}
-        </Section>
+        <Section title="Popular">{popular.map(movie => movie.title)}</Section>
       )}
     </Container>
   );
