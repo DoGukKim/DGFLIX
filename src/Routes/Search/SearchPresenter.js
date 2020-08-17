@@ -2,8 +2,8 @@ import React from "react";
 import PropsTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "../../Components/Loader";
-import { moviesApi } from "../../api";
 import Section from "../../Components/Section";
+import Mesaage from "../../Components/Message";
 
 const Container = styled.main`
   color: #fff;
@@ -55,6 +55,11 @@ const SearchPresenter = ({
             ))}
           </Section>
         )}
+        {error && <Mesaage text={error} />}
+        {tvResult &&
+          movieResult &&
+          tvResult.length === 0 &&
+          movieResult.length === 0 && <Mesaage text="Nothing Found..!" />}
       </>
     )}
   </Container>
