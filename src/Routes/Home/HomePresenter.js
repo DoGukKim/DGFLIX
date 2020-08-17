@@ -30,7 +30,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, error, loading }) =>
         </Section>
       )}
       {upcoming && upcoming.length > 0 && (
-        <Section title="Upcoming">
+        <Section title="Upcoming Movies">
           {upcoming.map(movie => (
             <Poster
               key={movie.id}
