@@ -27,3 +27,4 @@ Buliding a Movie Discovery App.
 * styled-components
 * React-helmet
 * prop-Types
+* Axios
