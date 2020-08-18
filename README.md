@@ -21,3 +21,9 @@ Buliding a Movie Discovery App.
 - [x] Movie Detail
 - [x] Search Movie
 - [x] Search TV Show
+
+## Library
+* React-router-dom
+* styled-components
+* React-helmet
+* prop-Types
