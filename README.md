@@ -1,5 +1,6 @@
 # DGFLIX
 
+http://DoGukKim.github.io/dgflix <br>
 Buliding a Movie Discovery App.
 
 ## Sreen
