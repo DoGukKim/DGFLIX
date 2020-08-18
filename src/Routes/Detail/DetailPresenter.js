@@ -25,7 +25,7 @@ const Content = styled.div`
   align-items: center;
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1440px;
+  max-width: 1280px;
   height: 100%;
 `;
 const Cover = styled.figure`
@@ -44,11 +44,11 @@ const Data = styled.div`
   z-index: 1;
 `;
 const Title = styled.h3`
-  font-size: 26px;
+  font-size: 40px;
   font-weight: 600;
 `;
 const ItemContainer = styled.div`
-  padding: 6px 0 0;
+  padding: 10px 0 0;
   font-size: 14px;
 `;
 const Item = styled.span``;
@@ -56,10 +56,10 @@ const Divider = styled.span`
   margin: 0 14px;
 `;
 const Overview = styled.p`
-  padding: 6px 0 0;
+  padding: 10px 0 0;
   width: 80%;
   font-size: 13px;
-  line-height: 1.6em;
+  line-height: 2em;
   opacity: 0.6;
 `;
 const DetailPresenter = ({ result, error, loading }) =>

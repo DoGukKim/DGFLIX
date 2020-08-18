@@ -8,7 +8,15 @@ const GnbWrap = styled.header`
   width: 100%;
 `;
 const Gnb = styled.nav`
+  display: flex;
+  justify-content: space-between;
   padding: 0px 20px;
+`;
+const Logo = styled.h1`
+  font-size: 30px;
+  font-weight: 600;
+  color: red;
+  letter-spacing: 0.028em;
 `;
 const GnbList = styled.ul`
   display: flex;
@@ -28,14 +36,20 @@ const GnbLink = styled(Link)`
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  font-size: 16px;
-  color: #fff;
+  font-size: ${props => (props.logo ? "30px" : "16px")};
+  font-weight: 600;
+  color: ${props => (props.logo ? "red" : "#fff")};
 `;
 const Header = ({ location: { pathname } }) => {
   return (
     <>
       <GnbWrap>
         <Gnb>
+          <Logo>
+            <GnbLink to="/" aria-label="Logo" logo>
+              DGFLIX
+            </GnbLink>
+          </Logo>
           <GnbList>
             <GnbItem current={pathname === "/"}>
               <GnbLink to="/">Movies</GnbLink>
