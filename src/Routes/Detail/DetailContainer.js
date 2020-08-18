@@ -10,7 +10,7 @@ export default class extends React.Component {
     } = props;
     this.state = {
       result: null,
-      loading: false,
+      loading: true,
       error: null,
       isMovie: pathname.includes("/movie/"),
     };
