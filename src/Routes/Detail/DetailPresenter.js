@@ -2,6 +2,7 @@ import React from "react";
 import PropsTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "../../Components/Loader";
+import { Helmet } from "react-helmet";
 
 // styled-components
 const Container = styled.main``;
@@ -63,9 +64,20 @@ const Overview = styled.p`
 `;
 const DetailPresenter = ({ result, error, loading }) =>
   loading ? (
-    <Loader />
+    <>
+      <Helmet>
+        <title>Loading | DGFLIX</title>
+      </Helmet>
+      <Loader />
+    </>
   ) : (
     <Container>
+      <Helmet>
+        <title>
+          {result.original_title ? result.original_title : result.original_name}
+          {""} | DGFLIX
+        </title>
+      </Helmet>
       <ContentWarpper>
         <Backdrop
           bgImage={`http://image.tmdb.org/t/p/original${result.backdrop_path}`}

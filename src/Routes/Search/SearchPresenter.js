@@ -1,6 +1,7 @@
 import React from "react";
 import PropsTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Loader from "../../Components/Loader";
 import Section from "../../Components/Section";
 import Mesaage from "../../Components/Message";
@@ -9,18 +10,15 @@ import Poster from "../../Components/Poster";
 const Container = styled.main`
   color: #fff;
 `;
-
 const Form = styled.form`
   margin: 20px 0;
   padding: 0px 20px;
 `;
-
 const Input = styled.input`
   width: 100%;
   all: unset;
   font-size: 21px;
 `;
-
 const SearchPresenter = ({
   movieResult,
   tvResult,
@@ -31,6 +29,9 @@ const SearchPresenter = ({
   updateTerm,
 }) => (
   <Container>
+    <Helmet>
+      <title>Search | DGFLIX</title>
+    </Helmet>
     <Form onSubmit={handleSubmit}>
       <Input
         placeholder="Search Movies or TV Shows..."
