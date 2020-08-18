@@ -4,10 +4,10 @@ Buliding a Movie Discovery App.
 
 ## Sreen
 
-- [ ] Home
-- [ ] TVShow
-- [ ] Search
-- [ ] Detail
+- [x] Home
+- [x] TVShow
+- [x] Search
+- [x] Detail
 
 ## API Verbs
 
